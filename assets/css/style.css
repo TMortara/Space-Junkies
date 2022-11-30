@@ -1,0 +1,9 @@
+h1 {
+font-size: 8rem;
+text-align: center;
+}
+
+/* padding for two placeholder continers */
+.container {
+    padding: 2rem;
+}
