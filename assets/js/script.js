@@ -19,3 +19,28 @@ L.marker([28.607989631957835, -80.60382221033875]).addTo(map);
 L.marker([25.996146341919793, -97.15445984398181]).addTo(map);
 
 
+
+
+
+//local storage
+
+
+//render local storage
+
+//API for rocketlive API
+var launchesUrl = "https://fdo.rocketlaunch.live/json/launches/next/5";
+
+
+
+function getLaunches(launchesUrl){
+    fetch(launchesUrl)
+    .then(function(response){
+        console.log(response);
+        console.log(response.status);
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+    })
+}
+getLaunches(launchesUrl);
