@@ -53,21 +53,85 @@ for (var i = 0; i < coordinates.length; i++) {
 
 //API for rocketlive API
 var launchesUrl = "https://fdo.rocketlaunch.live/json/launches/next/5";
+var launchContainerEl = document.getElementById("launch-container");
 
 
+
+// function clearLaunchContainer() {
+//     launchContainerEl.innerHTML = "";
+// }
+
+function renderLaunchCard(launchData) {
+    var launchCardEl = document.createElement("div"); 
+    launchCardEl.setAttribute("id", "launchCard");
+
+    var estimatedLaunchDate = new Date(launchData.sort_date * 1000).toLocaleDateString("en-US");
+    var launchDateEl = document.createElement("p");
+    launchDateEl.textContent = estimatedLaunchDate;
+
+    var locationName = launchData.pad.location.name;
+    var locationState = launchData.pad.location.statename;
+    var locationEl = document.createElement("p");
+    locationEl.textContent = "Location: " + locationName + ", " + locationState;
+
+    var launchDescription = launchData.launch_description;
+    var launchDescriptionEl = document.createElement("p");
+    launchDescriptionEl.textContent = "Launch Description: " + launchDescription;
+
+    var launchProvider = launchData.provider.name;
+    var launchProviderEl = document.createElement("p");
+    launchProviderEl.textContent = "Launch Provider: " + launchProvider;
+
+    var vehicleName = launchData.vehicle.name;
+    var vehicleNameEl = document.createElement("p");
+    vehicleNameEl.textContent = "Vehicle Name: " + vehicleName;
+
+    var weatherHeadingEl = document.createElement("h3");
+    weatherHeadingEl.textContent = "Weather";
+
+    var weatherCondition = launchData.weather_condition;
+    var weatherConditionEl = document.createElement("p");
+    weatherConditionEl.textContent = "Weather Condition: " + weatherCondition;
+    // if (!weatherCondition) {
+
+    // }
+
+    // var icon = launchData.weather_icon;
+    // var iconEl = document.createElement("img");
+    // iconEl.setAttribute("src", "")
+
+    var temp = launchData.weather_temp;
+    var tempEl = document.createElement("p");
+    tempEl.textContent = "Temperature: " + (Math.floor(temp)) + "°F";
+
+    var windSpeed = launchData.weather_wind_mph;
+    var windSpeedEl = document.createElement("p");
+    windSpeedEl.textContent = "Wind Speed: " + windSpeed + " mph";
+
+    launchCardEl.append(launchDateEl, locationEl, launchDescriptionEl, launchProviderEl, vehicleNameEl, weatherHeadingEl, weatherConditionEl, tempEl, windSpeedEl);
+    launchContainerEl.append(launchCardEl);
+}
 
 function getLaunches(launchesUrl){
     fetch(launchesUrl)
     .then(function(response){
-        console.log(response);
+        // console.log(response);
         console.log(response.status);
         return response.json();
     })
     .then(function(data){
         console.log(data);
+        // clearLaunchContainer();
+        // renderLaunchCard();
+        for (var i = 0; i < data.result.length; i++) {
+            console.log(data.result[i]);
+            renderLaunchCard(data.result[i]);
+        }
+            // console.log(renderLaunchCard);
     })
 }
 getLaunches(launchesUrl);
+<<<<<<< Updated upstream
 function show(value) {
     document.querySelector(".text-box").value = value;
   }
@@ -76,3 +140,6 @@ function show(value) {
   dropdown.onclick = function() {
       dropdown.classList.toggle("active")
   }
+=======
+
+>>>>>>> Stashed changes
