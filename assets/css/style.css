@@ -6,9 +6,41 @@ text-align: center;
 /* padding for two placeholder continers */
 .container {
     padding: 2rem;
+    padding-block: transparent;  
 }
-
 
 #map {
     height: 500px;
+    border-radius: 50%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:wheat;
+    font-family: 'OCR A Extended', sans-serif;   
+}
+
+* {
+    color:white;
+    font-family: 'OCR A Extended', sans-serif;
+}
+
+body {
+    background-image: url("/assets/images/59f86e9a43e6f89908a4f0b948915bef.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+}
+
+.notification-is-primary {
+    background-color: #3C4CA6;
+     border-radius: 25%;
+}
+
+footer {
+    background-image: url("/assets/images/d7602255848ab028e47a16d5ebcc8d18.jpeg");
+    background-size: cover;
+}
+
+strong {
+    color: rgb(95, 248, 110);
 }
