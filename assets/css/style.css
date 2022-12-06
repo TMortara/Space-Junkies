@@ -1,6 +1,6 @@
 h1 {
-font-size: 8rem;
-text-align: center;
+    font-size: 8rem;
+    text-align: center;
 }
 
 /* padding for two placeholder continers */
@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-    background-image: url("/assets/images/59f86e9a43e6f89908a4f0b948915bef.png");
+    background-image: url("../images/planets-background.png");
     background-attachment: fixed;
     background-size: cover;
     background-color: black;
@@ -37,7 +37,7 @@ body {
 }
 
 footer {
-    background-image: url("/assets/images/d7602255848ab028e47a16d5ebcc8d18.jpeg");
+    background-image: url("../images/stars-background.jpeg");
     background-size: cover;
 }
 
