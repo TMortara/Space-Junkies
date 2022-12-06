@@ -44,3 +44,7 @@ footer {
 strong {
     color: rgb(95, 248, 110);
 }
+
+.leaflet-popup-content{
+    color: black;
+}
