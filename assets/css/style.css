@@ -48,14 +48,14 @@ strong {
 .leaflet-popup-content{
     color: black;
 }
-/* *{
+ /*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 } */
 
-/* .container {
+ /*.container {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -66,8 +66,8 @@ strong {
 
 .dropdown {
     position: relative;
-    top: 50px;
-    left: 45%;
+    top: 40px;
+    left: 450px;
     margin-top: 15px;
     width: 300px;
     height: 50px;
@@ -76,7 +76,7 @@ strong {
 .dropdown::before {
     content: "";
     position: absolute;
-    top: 15px;
+    top: -50px;
     right: 20px;
     z-index: 1000;
     width: 8px;
@@ -90,14 +90,14 @@ strong {
 }
 
 .dropdown.active::before {
-    top: 22px;
+    top: 0px;
     transform: rotate(-225deg);
 }
 
 .dropdown input {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    bottom: 50px;
+    right: 10px;
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -112,7 +112,8 @@ strong {
 
 .dropdown .options {
     position: absolute;
-    top: 70px;
+    left: -10px;
+    top: 2px;
     width: 100%;
     background: #fff;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -130,7 +131,18 @@ strong {
     cursor: pointer;
 }
 
-.dropdown .options div:hover {
+.dropdown ol.options li:hover {
     background: #62baea;
-    color: #fff;
+    color: black;
+}
+
+li {
+    color: black;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+button, input, select, textarea { 
+    color: black;
+    font-weight: bold;
 }
