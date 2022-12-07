@@ -131,7 +131,6 @@ function getLaunches(launchesUrl){
     })
 }
 getLaunches(launchesUrl);
-<<<<<<< Updated upstream
 function show(value) {
     document.querySelector(".text-box").value = value;
   }
@@ -140,6 +139,3 @@ function show(value) {
   dropdown.onclick = function() {
       dropdown.classList.toggle("active")
   }
-=======
-
->>>>>>> Stashed changes
