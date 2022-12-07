@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,8 @@
     <!-- link to cooler font-->
     <link href="https://fonts.cdnfonts.com/css/ocr-a-extended" rel="stylesheet"/>
     <title>Space Junkies</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Space Junkies</h1>
     <h3 id="launch-heading">Upcoming Launch Data</h3>
     <div id="launch-data-container" class="container">
@@ -22,35 +22,41 @@
           <!-- </figure> -->
         </div>
         <div id="launch-container" class="notification-is-primary"></div>
-      </div>
-      <!-- This container has a <code>max-width</code> of <code>$desktop - $container-offset</code> on widescreen and fullhd. -->
-      <div class="container is-max-desktop">
-        <h2>Build your own launch!</h2>
-        <div class="notification-is-primary">
+    </div>
+    <!-- This container has a <code>max-width</code> of <code>$desktop - $container-offset</code> on widescreen and fullhd. -->
+    <div class="container is-max-desktop">
+      <h2>Build your own launch!</h2>
+      <div class="notification-is-primary">
       <div id = "map"></div>
+      </div>
+      <div class="dropdown">
+        <input class="text-box" type="text" placeholder="Locations" readonly>
+        <div class="options">
+          <div onclick="show('Location 1')">Naval Air Weapons Station China Lake, USA</div>
+          <div onclick="show('Location 2')">LP-41, Kauai, USA</div>
+          <div onclick="show('Location 3')">West Texas Suborbital Launch Site, Corn Ranch, USA</div>
+          <div onclick="show('Location 4')">Vertical Launch Area, Spaceport America, NM, USA</div>
+          <div onclick="show('Location 5')">Space Launch Complex 2,Vandenberg SFB, CA, USA</div>
+          <div onclick="show('Location 6')">Launch Pad 0-A, Wallops Island, Virginia, USA</div>
+          <div onclick="show('Location ')">Launch Complex 41, Kennedy Space Center, FL, USA</div>
+          <div onclick="show('Location 2')">Pacific Spaceport Complex, Alaska, USA</div>
+          <div onclick="show('Location 2')">Launch Pad 39A, Kennedy Space Center, FL, USA</div>
+          <div onclick="show('Location 2')">Orbital Launch Pad 1, Boca Chica State Park, TX, USA</div>
         </div>
       </div>
-      <h2>
-        <div class="dropdown">
-          <input class="text-box" type="text" placeholder="Locations" readonly>
-          <div class="options">
-            <div onclick="show('Location 1')">Location 1</div>
-            <div onclick="show('Location 2')">Location 2 </div>
-          </div>
-      </div>
-      
-      <button class="calender">Create!</button>
-      <input type="date" name="party" min="2022-12-12">
-      </h2>
-      <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            This website is brought to you by the <strong>Space Junkies</strong> of Group 3. &copy; Release Date December 2022
-          </p>
-        </div>
-    </footer>
-    <!-- link for map API-->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-    <script src="./assets/js/script.js"></script>
-</body>
+    </div>
+
+    <button class="calender">Create!</button>
+    <input type="date" name="party" min="2022-12-12">
+  </body>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        This website is brought to you by the <strong>Space Junkies</strong> of Group 3. &copy; Release Date December 2022
+      </p>
+    </div>
+  </footer>
+  <!-- link for map API-->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="./assets/js/script.js"></script>
 </html>
