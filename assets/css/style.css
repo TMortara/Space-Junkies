@@ -156,3 +156,38 @@ button {
                 0 0 30px 0 crimson,
                 0 0 10px 0 crimson inset;
 }
+
+/* launch data container styling */
+#launch-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#launch-data-container {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#launch-photo {
+    width: 50%;
+    padding-right: 2rem;
+}
+
+#launch-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 50%;
+    height: 19rem;
+    align-content: center;
+}
+
+#launchCard {
+    flex-grow: 1;
+    border: 1px black solid;
+    padding: 1.5rem;
+    text-align: center;
+
+}
