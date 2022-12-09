@@ -29,24 +29,23 @@
       <div class="notification-is-primary">
       <div id = "map"></div>
       </div>
-      <div class="dropdown">
-        <input class="text-box" type="text" placeholder="Locations" readonly>
-        <div class="options">
-          <div onclick="show('Location 1')">Naval Air Weapons Station China Lake, USA</div>
-          <div onclick="show('Location 2')">LP-41, Kauai, USA</div>
-          <div onclick="show('Location 3')">West Texas Suborbital Launch Site, Corn Ranch, USA</div>
-          <div onclick="show('Location 4')">Vertical Launch Area, Spaceport America, NM, USA</div>
-          <div onclick="show('Location 5')">Space Launch Complex 2,Vandenberg SFB, CA, USA</div>
-          <div onclick="show('Location 6')">Launch Pad 0-A, Wallops Island, Virginia, USA</div>
-          <div onclick="show('Location ')">Launch Complex 41, Kennedy Space Center, FL, USA</div>
-          <div onclick="show('Location 2')">Pacific Spaceport Complex, Alaska, USA</div>
-          <div onclick="show('Location 2')">Launch Pad 39A, Kennedy Space Center, FL, USA</div>
-          <div onclick="show('Location 2')">Orbital Launch Pad 1, Boca Chica State Park, TX, USA</div>
-        </div>
-      </div>
-    </div>
-
-    <button class="calender">Create!</button>
+      <form name="my-form" action="" method="post">
+        <select id="Locations" onclick="display();" onchange="dropdownChange();">
+            <option disabled hidden selected>Select</option>
+            <option value="Location 1">Naval Air Weapons Station China Lake, USA</option>
+            <option value="Location 2">LP-41, Kauai, USA</option>
+            <option value="Location 3">West Texas Suborbital Launch Site, Corn Ranch, USA</option>
+            <option value="Location 4">Vertical Launch Area, Spaceport America, NM, USA</option>
+            <option value="Location 5">Space Launch Complex 2,Vandenberg SFB, CA, USA</option>
+            <option value="Location 6">Launch Pad 0-A, Wallops Island, Virginia, USA</option>
+            <option value="Location 7">Launch Complex 41, Kennedy Space Center, FL, USA</option>
+            <option value="Location 8">Pacific Spaceport Complex, Alaska, USA</option>
+            <option value="Location 9">Launch Pad 39A, Kennedy Space Center, FL, USA</option>
+            <option value="Location 10">Orbital Launch Pad 1, Boca Chica State Park, TX, USA</option>
+        </select>
+    </form>
+  <a href="\launchresults.html"></a>
+    <button onclick="gotoLink(globalThis)" value="\launchresults.html" id = "button" class="submit">Create!</button>
     <input type="date" name="party" min="2022-12-12">
   </body>
   <footer class="footer">

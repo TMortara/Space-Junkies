@@ -134,8 +134,7 @@ getLaunches(launchesUrl);
 function show(value) {
     document.querySelector(".text-box").value = value;
   }
-  
-  let dropdown = document.querySelector(".dropdown")
-  dropdown.onclick = function() {
-      dropdown.classList.toggle("active")
-  }
+function gotoLink(link) {
+    console.log(link.value);
+    location.href = '\launchresults.html'
+};
