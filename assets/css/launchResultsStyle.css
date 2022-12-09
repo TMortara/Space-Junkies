@@ -12,7 +12,7 @@ footer {
 }
 
 .footer {
-    display: flexbox;
+    display: flex;
     padding-bottom: 25px;
     padding-top: 647px;
 }
