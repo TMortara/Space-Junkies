@@ -1,7 +1,8 @@
 
-* {
+body {
     background-image: url("../images/39149.jpg");
     background-size:cover;
+    color:black;
 }
 
 footer {
@@ -16,20 +17,22 @@ footer {
     padding-top: 647px;
 }
 
-#main-title {
-    font-size: 8rem;
-    color:wheat;
-    font-family: 'OCR A Extended', sans-serif;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+footer span {
+    background-color: black;
+    color: white;
+}
+
+strong {
+    color: chartreuse;
 }
 
 #main-title {
-    font-size: 8rem;
+    font-size: xx-large;
     color:wheat;
     font-family: 'OCR A Extended', sans-serif;
     text-align: center;
-    padding: 0;
     margin: 0;
+    background-image: linear-gradient(to right, #3C4CA6, #2D1040, #0D0D0D);
+    border-radius: 6px;
+    padding: 3px 6px;
 }
