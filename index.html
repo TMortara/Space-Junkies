@@ -50,8 +50,24 @@
         </div>
         <div id = "map"></div>
       </div>
-    </div>
-    <a href="\launchresults.html"></a>
+      <form name="my-form" action="" method="post">
+        <select id="locations">
+            <option disabled hidden selected>Select</option>
+            <option data-coordinate-index-location = "0" value="Location 1">Naval Air Weapons Station China Lake, USA</option>
+            <option data-coordinate-index-location = "1" value="Location 2">LP-41, Kauai, USA</option>
+            <option data-coordinate-index-location = "2" value="Location 3">West Texas Suborbital Launch Site, Corn Ranch, USA</option>
+            <option data-coordinate-index-location = "3" value="Location 4">Vertical Launch Area, Spaceport America, NM, USA</option>
+            <option data-coordinate-index-location = "4" value="Location 5">Space Launch Complex 2,Vandenberg SFB, CA, USA</option>
+            <option data-coordinate-index-location = "5" value="Location 6">Launch Pad 0-A, Wallops Island, Virginia, USA</option>
+            <option data-coordinate-index-location = "6" value="Location 7">Launch Complex 41, Kennedy Space Center, FL, USA</option>
+            <option data-coordinate-index-location = "7" value="Location 8">Pacific Spaceport Complex, Alaska, USA</option>
+            <option data-coordinate-index-location = "8" value="Location 9">Launch Pad 39A, Kennedy Space Center, FL, USA</option>
+            <option data-coordinate-index-location = "9" value="Location 10">Orbital Launch Pad 1, Boca Chica State Park, TX, USA</option>
+        </select>
+    </form>
+  <a href="\launchresults.html"></a>
+    <button value="\launchresults.html" id = "button" class="submit">Create!</button>
+    <input id="date-input" type="date" name="party" min="2022-12-12">
   </body>
   <footer class="footer">
     <div class="content has-text-centered">
@@ -64,3 +80,7 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <script src="./assets/js/script.js"></script>
 </html>
+
+<!-- <select id="locations" onclick="display();" onchange="dropdownChange();"> -->
+  <!-- <button onclick="gotoLink(globalThis)" value="\launchresults.html" id = "button" class="submit">Create!</button> -->
+
