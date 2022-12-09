@@ -140,7 +140,7 @@ function show(value) {
 
 
 
-var createButtonEl = document.getElementById("button");
+var createButtonEl = document.getElementById("create-button");
 
 createButtonEl.addEventListener("click", function() {
     handleFormSubmit();

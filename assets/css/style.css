@@ -8,10 +8,43 @@ h1 {
     padding: 2rem;
     padding-block: transparent;  
 }
-
-#map {
+.select-menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     height: 500px;
-    border-radius: 50%;
+    border-radius: 0 !important;
+}
+
+.input-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em 1em 1em 1em;
+}
+
+#map{
+    height: 95%;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 1em 1em 1em 1em;
+}
+
+#build-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    display: none;
+}
+
+.leaflet-popup-content{
+    color: black;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -45,103 +78,6 @@ strong {
     color: rgb(95, 248, 110);
 }
 
-.leaflet-popup-content{
-    color: black;
-}
- /*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-} */
-
- /*.container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background: #fafafa;
-} */
-
-.dropdown {
-    position: relative;
-    top: 40px;
-    left: 450px;
-    margin-top: 15px;
-    width: 300px;
-    height: 50px;
-}
-
-.dropdown::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: 20px;
-    z-index: 1000;
-    width: 8px;
-    height: 8px;
-    border: 2px solid #333;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
-    transform: rotate(-45deg);
-    transition: 0.5s;
-    pointer-events: none;
-}
-
-.dropdown.active::before {
-    top: 0px;
-    transform: rotate(-225deg);
-}
-
-.dropdown input {
-    position: relative;
-    bottom: 50px;
-    right: 10px;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background: #fff;
-    font-size: 1.2em;
-    border: none;
-    outline: none;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    padding: 12px 20px;
-    border-radius: 10px;
-}
-
-.dropdown .options {
-    position: absolute;
-    left: -10px;
-    top: 2px;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    overflow: hidden;
-    display: none;
-}
-
-.dropdown.active .options {
-    display: block;
-}
-
-.dropdown .options div {
-    padding: 12px 20px;
-    cursor: pointer;
-}
-
-.dropdown ol.options li:hover {
-    background: #62baea;
-    color: black;
-}
-
-li {
-    color: black;
-    text-align: center;
-    padding: 12px 20px;
-}
-
 button, input, select, textarea { 
     color: black;
     font-weight: bold;
@@ -152,9 +88,12 @@ button {
     border-radius: 10px;
     color: #fff;
     padding: 8px;
+}
+
+button:hover{
     box-shadow: 0 0 30px 0 crimson,
-                0 0 30px 0 crimson,
-                0 0 10px 0 crimson inset;
+    0 0 30px 0 crimson,
+    0 0 10px 0 crimson inset;
 }
 
 /* launch data container styling */
