@@ -1,5 +1,17 @@
 
 * {
-    background-image: url("../images/astronaut-drinking-carlsberg-on-moon-hd-desktop-wallpaper.jpg");
+    background-image: url("../images/39149.jpg");
     background-size:cover;
+}
+
+footer {
+    background-image: url("../images/astronaut-drinking-carlsberg-on-moon-hd-desktop-wallpaper.jpg");
+    min-height: 657px;
+    
+}
+
+.footer {
+    display: flexbox;
+    padding-bottom: 25px;
+    padding-top: 647px;
 }
