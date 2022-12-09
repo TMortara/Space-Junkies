@@ -18,9 +18,7 @@ var coordinates = [
     [28.583716994602874, -80.58272857727329],
     [57.43532716813497, -152.3395539107882],
     [28.607989631957835, -80.60382221033875],
-
     [25.996146341919793, -97.15445984398181],
-
 ];
 
 var locations = [
@@ -55,12 +53,6 @@ for (var i = 0; i < coordinates.length; i++) {
 var launchesUrl = "https://fdo.rocketlaunch.live/json/launches/next/5";
 var launchContainerEl = document.getElementById("launch-container");
 
-
-
-// function clearLaunchContainer() {
-//     launchContainerEl.innerHTML = "";
-// }
-
 function renderLaunchCard(launchData) {
     var launchCardEl = document.createElement("div"); 
     launchCardEl.setAttribute("id", "launchCard");
@@ -92,14 +84,7 @@ function renderLaunchCard(launchData) {
     var weatherCondition = launchData.weather_condition;
     var weatherConditionEl = document.createElement("p");
     weatherConditionEl.textContent = "Weather Condition: " + weatherCondition;
-    // if (!weatherCondition) {
-
-    // }
-
-    // var icon = launchData.weather_icon;
-    // var iconEl = document.createElement("img");
-    // iconEl.setAttribute("src", "")
-
+  
     var temp = launchData.weather_temp;
     var tempEl = document.createElement("p");
     tempEl.textContent = "Temperature: " + (Math.floor(temp)) + "°F";
@@ -130,11 +115,78 @@ function getLaunches(launchesUrl){
             // console.log(renderLaunchCard);
     })
 }
-getLaunches(launchesUrl);
+getLaunches(launchesUrl); //add document.ready()
+
 function show(value) {
     document.querySelector(".text-box").value = value;
+    selectedCoordinateLocationIndex = value.getAttribute("data-coordinate-index-location");
+    console.log(selectedCoordinateLocationIndex);
+    console.log(coordinates[selectedCoordinateLocationIndex]);
+    getForecast(coordinates[selectedCoordinateLocationIndex][0], coordinates[selectedCoordinateLocationIndex][1]);
   }
-function gotoLink(link) {
-    console.log(link.value);
-    location.href = '\launchresults.html'
+// function gotoLink(link) {
+//     console.log(link.value);
+//     location.href = '\launchresults.html'
+// };
+  
+//   let dropdown = document.querySelector(".dropdown")
+//   dropdown.onclick = function() {
+//       dropdown.classList.toggle("active")
+//       var locationSelectEl = document.getElementById("locations");
+//       var locationsValue = locationSelectEl.value;
+//       var locationsText = locationSelectEl.options[locationSelectEl.selectedIndex].text;
+//       console.log(locationsText);
+//   }
+
+
+
+var createButtonEl = document.getElementById("button");
+
+createButtonEl.addEventListener("click", function() {
+    handleFormSubmit();
+});
+
+function handleFormSubmit(event) {
+    // event.preventDefault();
+    var locationSelectEl = document.getElementById("locations");
+    var locationsValue = locationSelectEl.value;
+    var locationsText = locationSelectEl.options[locationSelectEl.selectedIndex].text;
+    console.log(locationsText);
+    var dateInputEl = document.getElementById("date-input");
+    // dateInputEl = 
 };
+
+//16 day weather forecast for results 
+var apiKey = "c7f3d71450efdca51fea8035a42258bd";
+var forecastContainerEl = document.querySelector("#forecast-container");
+var forecastCardContainerEl = document.querySelector("#forecast-card-container");
+var selectedCoordinateLocationIndex;
+
+
+// function saveToStorage() {
+//     var history = localStorage.setItem("user-input", JSON.stringify())
+// }
+
+function getForecast(lat, lon) {
+    var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+    fetch(url).then(function(respone){
+        return respone.json();
+    })
+    .then(function(data){
+        console.log(data);  
+        // renderForecastContainer(); 
+        for (var i = 0; i < data.list.length; i++) {
+            var hour = new Date(data.list[i].dt * 1000).getUTCHours(); 
+            if (hour === 12) {
+                console.log(data.list[i]);
+        //         // renderForecastCard(data.list[i]);
+            }
+        }
+    }) 
+}
+
+
+
+
+
+
