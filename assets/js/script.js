@@ -140,21 +140,31 @@ function show(value) {
 
 
 
+
+
+// On Create Button, Location and Date is Stored on Local Storge
+
+function handleFormSubmit(event) {
+    // Stores The Value of Location to localStorage
+    var locationSelectEl = document.getElementById("locations");
+    var locationsText = locationSelectEl.options[locationSelectEl.selectedIndex].text;
+    localStorage.setItem("locations", locationsText);
+    
+    //Stores The Value of Date to localStorage
+    var dateInputEl = document.getElementById("date-input");
+    var dateInputValue = dateInputEl.value;
+    localStorage.setItem("date", dateInputValue);
+    
+    //console.log(localStorage.getItem("locations")); (Y'all can uncomment this line to test)
+    //console.log(localStorage.getItem("date")); (Y'all can uncomment this line to test)
+};
+
 var createButtonEl = document.getElementById("create-button");
 
 createButtonEl.addEventListener("click", function() {
     handleFormSubmit();
 });
-
-function handleFormSubmit(event) {
-    // event.preventDefault();
-    var locationSelectEl = document.getElementById("locations");
-    var locationsValue = locationSelectEl.value;
-    var locationsText = locationSelectEl.options[locationSelectEl.selectedIndex].text;
-    console.log(locationsText);
-    var dateInputEl = document.getElementById("date-input");
-    // dateInputEl = 
-};
+//----------------------------------------------------------------
 
 //16 day weather forecast for results 
 var apiKey = "c7f3d71450efdca51fea8035a42258bd";
@@ -162,10 +172,6 @@ var forecastContainerEl = document.querySelector("#forecast-container");
 var forecastCardContainerEl = document.querySelector("#forecast-card-container");
 var selectedCoordinateLocationIndex;
 
-
-// function saveToStorage() {
-//     var history = localStorage.setItem("user-input", JSON.stringify())
-// }
 
 function getForecast(lat, lon) {
     var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
