@@ -13,15 +13,14 @@ h1 {
     flex-direction: row;
     width: 100%;
     height: 500px;
-    border-radius: 0 !important;
+    border-radius: 8% !important;
 }
 
 .input-container{
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 1em 1em 1em 1em;
+    margin: 7em 1em 1em 1em;
 }
 
 #map{
