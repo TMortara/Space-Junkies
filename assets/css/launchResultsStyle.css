@@ -1,14 +1,71 @@
-
 body {
     background-image: url("../images/39149.jpg");
     background-size:cover;
     color:black;
 }
 
+#main-title {
+    font-size: xx-large;
+    color:wheat;
+    font-family: 'OCR A Extended', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-image: linear-gradient(to right, #3C4CA6, #2D1040, #0D0D0D);
+    border-radius: 6px;
+    padding: 3px 6px;
+}
+
+#input-results {
+    color:wheat;
+    font-family: 'OCR A Extended', sans-serif;
+}
+
+/* forecast container */
+div > h2 {
+    color:wheat;
+    font-family: 'OCR A Extended', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#forecast-container {
+    padding-top: 1rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#forecast-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.col-2 {
+    color:wheat;
+    border: wheat 2px solid;
+    font-family: 'OCR A Extended', sans-serif;
+    text-align: center;
+    width: 20%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+/* forecast message */
+h3 {
+    color:wheat;
+    font-style: italic;
+    font-family: 'OCR A Extended', sans-serif;
+}
+#countdown {
+    color:wheat;
+    font-style: italic;
+    font-family: 'OCR A Extended', sans-serif;
+}
+
 footer {
     background-image: url("../images/astronaut-drinking-carlsberg-on-moon-hd-desktop-wallpaper.jpg");
     min-height: 657px;
-    
 }
 
 .footer {
@@ -24,15 +81,4 @@ footer span {
 
 strong {
     color: chartreuse;
-}
-
-#main-title {
-    font-size: xx-large;
-    color:wheat;
-    font-family: 'OCR A Extended', sans-serif;
-    text-align: center;
-    margin: 0;
-    background-image: linear-gradient(to right, #3C4CA6, #2D1040, #0D0D0D);
-    border-radius: 6px;
-    padding: 3px 6px;
 }
