@@ -109,16 +109,7 @@ function getLaunches(launchesUrl){
         }
     })
 }
-getLaunches(launchesUrl); //add document.ready()
-
-// function show(value) {
-//     document.querySelector(".text-box").value = value;
-    
-//   }
-// function gotoLink(link) {
-//     console.log(link.value);
-//     location.href = '\launchresults.html'
-// };
+getLaunches(launchesUrl); 
   
 // On Create Button, Location and Date is Stored on Local Storge
 
@@ -142,42 +133,13 @@ function handleFormSubmit(event) {
     localStorage.setItem("launch-name", launchNameEl);
 
     console.log(localStorage.getItem("locations")); 
-    // (Y'all can uncomment this line to test)
     console.log(localStorage.getItem("date")); 
-    // (Y'all can uncomment this line to test)
 };
 
+//clicking create button
 createButtonEl.addEventListener("click", function() {
     handleFormSubmit();
-});
-//----------------------------------------------------------------
-
-
-
-
-// modal code ---------------------->//
-
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
-const okClick = document.querySelector(".ok");
-
-// close modal function
-const closeModal = function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
-
-// close the modal when the close button and overlay is clicked
-closeModalBtn.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
-
-// close modal when the Esc key is pressed
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
+    
 });
 
 // open modal function
