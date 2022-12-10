@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>Space Junkies</h1>
-    <h3 id="launch-heading">Upcoming Launch Data</h3>
+    <h2 id="launch-heading">Upcoming Launch Data</h2>
     <div id="launch-data-container" class="container">
         <div id="launch-photo">
           <!-- <figure class="image is-5by4"> -->
@@ -23,8 +23,26 @@
             </video>
           <!-- </figure> -->
         </div>
-        <div id="launch-container" class="notification-is-primary"></div>
-    </div>
+      <div id="launch-container" class="notification-is-primary"></div></div>
+    
+      <div class="overlay hidden"></div>
+      <section class="modal hidden">
+      <div class="flex">
+        <button class="btn-close">⨉</button>
+      
+        <div>
+          <h2 class="warning">❗ ⚠ ‼ WARNING! </h2>
+            <p>Please Be Advised the content on this page is meant entirely for the sake of satisfying basic space travel curiosity and is recommended to be used for <span class="entertainment">Entertainment</span> purposes <span class="entertainment">ONLY.</span> 
+                 <br> &nbsp;&nbsp;This data is only taken from a few small APIs and it is <span class="not">NOT</span> recommended to actually use the data results for an actual space launch! ‘Space Junkies’ cannot be held responsible for any mishaps that occur during an actual launch based upon our information.
+                <br>
+                <br>
+                Select OK to continue. . .
+            </p>
+            <a<button class="ok" a-href="\launchresults.html">OK</span>
+        </div>
+      </div>
+    </section>  
+        
     <!-- This container has a <code>max-width</code> of <code>$desktop - $container-offset</code> on widescreen and fullhd. -->
     <div class="container">
       <h2 id="build-heading">Build your own launch!</h2>
@@ -48,18 +66,18 @@
           <label for="launchname">Custom Launch Name</label>
           <input id="launch-name" type="text" name="launchname">
           <br>
-          <input id="date-input" type="date" name="party" min="12-12-2022">
+          <input id="date-input" type="date" name="party" min="2022-12-12">
           <br>
-          <button value="\launchresults.html" id = "create-button" class="submit">Create!</button>
+          <button id ="create-button" class="btn btn-open">Create!</button>
         </div>
+
         <div id = "map"></div>
       </div>
-    </div>
-  <a href="\launchresults.html"></a>
+    
   <footer class="footer">
-    <div class="content has-text-centered">
+        <div class="content has-text-centered">
       <p>
-        This website is brought to you by the <strong>Space Junkies</strong> of Group 3. &copy; Release Date December 2022
+        &nbsp; This website is brought to you by the <strong>Space Junkies</strong> of Group 3. &copy; Release Date December 2022 &nbsp;
       </p>
     </div>
   </footer>
