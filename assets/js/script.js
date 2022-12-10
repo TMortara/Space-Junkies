@@ -109,16 +109,7 @@ function getLaunches(launchesUrl){
         }
     })
 }
-getLaunches(launchesUrl); //add document.ready()
-
-// function show(value) {
-//     document.querySelector(".text-box").value = value;
-    
-//   }
-// function gotoLink(link) {
-//     console.log(link.value);
-//     location.href = '\launchresults.html'
-// };
+getLaunches(launchesUrl); 
   
 // On Create Button, Location and Date is Stored on Local Storge
 
@@ -142,18 +133,14 @@ function handleFormSubmit(event) {
     localStorage.setItem("launch-name", launchNameEl);
 
     console.log(localStorage.getItem("locations")); 
-    // (Y'all can uncomment this line to test)
     console.log(localStorage.getItem("date")); 
-    // (Y'all can uncomment this line to test)
 };
 
+//clicking create button
 createButtonEl.addEventListener("click", function() {
     handleFormSubmit();
+    
 });
-//----------------------------------------------------------------
-
-
-
 
 // modal code ---------------------->//
 
