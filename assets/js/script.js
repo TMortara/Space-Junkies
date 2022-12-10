@@ -1,3 +1,15 @@
+//Global Variables
+var createButtonEl = document.getElementById("create-button");
+
+//Rocket Launch API
+var launchesUrl = "https://fdo.rocketlaunch.live/json/launches/next/5";
+var launchContainerEl = document.getElementById("launch-container");
+
+//5 day weather forecast for results 
+var apiKey = "c7f3d71450efdca51fea8035a42258bd";
+var forecastContainerEl = document.querySelector("#forecast-container");
+var forecastCardContainerEl = document.querySelector("#forecast-card-container");
+
 //Map Code
 var map = L.map('map').setView([38.15114045856517, -97.92229780772017], 4);
 
@@ -37,22 +49,7 @@ var locations = [
 for (var i = 0; i < coordinates.length; i++) {
     L.marker(coordinates[i]).bindPopup(locations[i]).addTo(map);
 }
-
-
-
-
-
-
-
-//local storage
-
-
-//render local storage
-
 //API for rocketlive API
-var launchesUrl = "https://fdo.rocketlaunch.live/json/launches/next/5";
-var launchContainerEl = document.getElementById("launch-container");
-
 function renderLaunchCard(launchData) {
     var launchCardEl = document.createElement("div"); 
     launchCardEl.setAttribute("id", "launchCard");
@@ -97,99 +94,66 @@ function renderLaunchCard(launchData) {
     launchContainerEl.append(launchCardEl);
 }
 
+//call Rocket Launch Live API call
 function getLaunches(launchesUrl){
     fetch(launchesUrl)
     .then(function(response){
-        // console.log(response);
         console.log(response.status);
         return response.json();
     })
     .then(function(data){
         console.log(data);
-        // clearLaunchContainer();
-        // renderLaunchCard();
         for (var i = 0; i < data.result.length; i++) {
             console.log(data.result[i]);
             renderLaunchCard(data.result[i]);
         }
-            // console.log(renderLaunchCard);
     })
 }
 getLaunches(launchesUrl); //add document.ready()
 
-function show(value) {
-    document.querySelector(".text-box").value = value;
-    selectedCoordinateLocationIndex = value.getAttribute("data-coordinate-index-location");
-    console.log(selectedCoordinateLocationIndex);
-    console.log(coordinates[selectedCoordinateLocationIndex]);
-    getForecast(coordinates[selectedCoordinateLocationIndex][0], coordinates[selectedCoordinateLocationIndex][1]);
-  }
+// function show(value) {
+//     document.querySelector(".text-box").value = value;
+    
+//   }
 // function gotoLink(link) {
 //     console.log(link.value);
 //     location.href = '\launchresults.html'
 // };
   
-//   let dropdown = document.querySelector(".dropdown")
-//   dropdown.onclick = function() {
-//       dropdown.classList.toggle("active")
-//       var locationSelectEl = document.getElementById("locations");
-//       var locationsValue = locationSelectEl.value;
-//       var locationsText = locationSelectEl.options[locationSelectEl.selectedIndex].text;
-//       console.log(locationsText);
-//   }
-
-
-
-
-
 // On Create Button, Location and Date is Stored on Local Storge
 
 function handleFormSubmit(event) {
     // Stores The Value of Location to localStorage
     var locationSelectEl = document.getElementById("locations");
     var locationsText = locationSelectEl.options[locationSelectEl.selectedIndex].text;
+    var selectedLocationValue = locationSelectEl.value;
     localStorage.setItem("locations", locationsText);
+    console.log(selectedLocationValue);
+    console.log(coordinates[selectedLocationValue]);
     
     //Stores The Value of Date to localStorage
     var dateInputEl = document.getElementById("date-input");
     var dateInputValue = dateInputEl.value;
     localStorage.setItem("date", dateInputValue);
+    localStorage.setItem("longitude", coordinates[selectedLocationValue][0]);
+    localStorage.setItem("latitude", coordinates[selectedLocationValue][1]);
     
-    //console.log(localStorage.getItem("locations")); (Y'all can uncomment this line to test)
-    //console.log(localStorage.getItem("date")); (Y'all can uncomment this line to test)
-};
+    var launchNameEl = document.getElementById("launch-name").value.trim();
+    localStorage.setItem("launch-name", launchNameEl);
 
-var createButtonEl = document.getElementById("create-button");
+    console.log(localStorage.getItem("locations")); 
+    // (Y'all can uncomment this line to test)
+    console.log(localStorage.getItem("date")); 
+    // (Y'all can uncomment this line to test)
+};
 
 createButtonEl.addEventListener("click", function() {
     handleFormSubmit();
 });
 //----------------------------------------------------------------
 
-//16 day weather forecast for results 
-var apiKey = "c7f3d71450efdca51fea8035a42258bd";
-var forecastContainerEl = document.querySelector("#forecast-container");
-var forecastCardContainerEl = document.querySelector("#forecast-card-container");
-var selectedCoordinateLocationIndex;
 
 
-function getForecast(lat, lon) {
-    var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
-    fetch(url).then(function(respone){
-        return respone.json();
-    })
-    .then(function(data){
-        console.log(data);  
-        // renderForecastContainer(); 
-        for (var i = 0; i < data.list.length; i++) {
-            var hour = new Date(data.list[i].dt * 1000).getUTCHours(); 
-            if (hour === 12) {
-                console.log(data.list[i]);
-        //         // renderForecastCard(data.list[i]);
-            }
-        }
-    }) 
-}
 
 
 
