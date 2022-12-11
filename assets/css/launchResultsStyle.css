@@ -15,26 +15,41 @@ body {
     padding: 3px 6px;
 }
 
-#input-results {
+#input-container {
     color:wheat;
     font-family: 'OCR A Extended', sans-serif;
+    padding-top: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+#input-results {
+    text-align: center;
 }
 
 /* forecast container */
 div > h2 {
     color:wheat;
     font-family: 'OCR A Extended', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
     text-align: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+
+#message-text {
+    font-size: 1.0rem;
+    font-weight: lighter;
+    text-align: center;
 }
 
 #forecast-container {
    
     width: 95%;
     margin: 0 auto;
-    background-color: #0D0D0D;
 }
 
 #forecast-card-container {
@@ -51,19 +66,29 @@ div > h2 {
     width: 20%;
     padding: 0.5rem;
     margin: 0.5rem;
+    background-color: #0D0D0D;
 }
 /* forecast message */
 h3 {
     color:wheat;
-    font-style: italic;
     font-family: 'OCR A Extended', sans-serif;
     margin-left: 2.4rem;
+    font-size: 1.5rem;
 }
 #countdown {
     color:wheat;
     font-style: italic;
     font-family: 'OCR A Extended', sans-serif;
     margin-left: 2.5rem;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+hr {
+    border:solid 1px wheat;
+    width: 80%;
+    color: wheat;
+    height: 1px;
 }
 
 footer {
@@ -91,5 +116,4 @@ strong {
 }
 #vid {
     margin-left: 2.25rem;
-
 }

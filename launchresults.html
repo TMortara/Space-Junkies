@@ -14,19 +14,23 @@
 </head>
 <body>
     <h1 id="main-title">Your Launch</h1>
-<!-- video encoded here. Added some features so it's less CSS.-->
-<video width="250" id="vid" height="250" autoplay muted loop="true">
+    <div id="input-container">
+    <!-- video encoded here. Added some features so it's less CSS.-->
+    <video width="500" id="vid" height="250" autoplay muted loop="true">
         <source src="./assets/images/rocketman.mp4" type="video/mp4">
     </video>
+    <div id="countdown"></div>
+    <hr>
     <div id="input-results"></div>
+    <hr>
+    </div>
     <div id="forecast-location"></div>
     <div id="forecast-container">
         <div id="forecast-card-container"></div>
     </div>
     <div>
-        <h3>**Check back closer to your launch date to get the most up to date weather forecast for your launch.</h3>
+        <h3 id="message-text">**Check back closer to your launch date to get the most up to date weather forecast for your launch.</h3>
     </div>
-    <div id="countdown"></div>
     <footer class="footer">
         <div class="content has-text-centered">
           <p><span>&nbsp;
