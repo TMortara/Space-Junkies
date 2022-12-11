@@ -86,7 +86,8 @@ function getForecast(lat, lon) {
 
 getForecast(longitude, latitude);
 
-var endDate = new Date(dateUserInput)
+var formatDate = new Date(dateUserInput);
+var endDate = Date.UTC(formatDate.getUTCFullYear(), formatDate.getUTCMonth(), formatDate.getUTCDate());
 var second = 1000;
 var minute = second * 60;
 var hour = minute * 60;
@@ -94,7 +95,7 @@ var day = hour * 24;
 var countdownTimer;
 
 function countdownClock() {
-    var present = new Date();
+    var present = Date.now();
     var difference = endDate - present;
 
     if (difference < 0) {
