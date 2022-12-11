@@ -31,9 +31,10 @@ div > h2 {
 }
 
 #forecast-container {
-    padding-top: 1rem;
+    /* padding-top: 0.5rem; */
     width: 95%;
     margin: 0 auto;
+    background-color: #0D0D0D;
 }
 
 #forecast-card-container {
@@ -56,11 +57,13 @@ h3 {
     color:wheat;
     font-style: italic;
     font-family: 'OCR A Extended', sans-serif;
+    margin-left: 2.4rem;
 }
 #countdown {
     color:wheat;
     font-style: italic;
     font-family: 'OCR A Extended', sans-serif;
+    margin-left: 2.5rem;
 }
 
 footer {
@@ -82,4 +85,11 @@ footer span {
 
 strong {
     color: chartreuse;
+}
+#input-results {
+    margin-left: 2.5rem;
+}
+#vid {
+    margin-left: 2.25rem;
+
 }
