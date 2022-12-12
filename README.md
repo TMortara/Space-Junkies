@@ -2,6 +2,9 @@
 ## Site Description
 Within this project, our goal was to set up a informational space themed webpage that allows the user to build their own launch.
 
+## Deployed Site
+https://tmortara.github.io/Space-Junkies/
+
 ## Navigating the Space Junkies Site
 To do this we used two separate pages. The top of the first page displays the next 5 launches, built from the Rocket Launch Live API, and the weather forecast for each launch. 
 
@@ -71,3 +74,9 @@ None
 MIT license
 
 ## Screenshots of Site
+
+![Space Junkies Landing Page](assets/images/SpaceJunkiesMain.png)
+
+Launch Results
+
+![Launch Results](assets/images/launchresults.png)
