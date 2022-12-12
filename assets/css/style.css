@@ -24,6 +24,11 @@ h1 {
 
 #locations {
     padding: 0.3rem;
+    color: black;
+}
+
+#locations option {
+    color: black;
 }
 
 #launch-name-label {
