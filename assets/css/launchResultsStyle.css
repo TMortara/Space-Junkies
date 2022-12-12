@@ -44,6 +44,7 @@ div > h2 {
     font-size: 1.0rem;
     font-weight: lighter;
     text-align: center;
+    background-color:#3C4CA6;
 }
 
 #forecast-container {
@@ -114,6 +115,10 @@ strong {
 #input-results {
     margin-left: 2.5rem;
 }
-#vid {
-    margin-left: 2.25rem;
+
+.text {
+    backdrop-filter: blur(10px);
+    text-align: center;
 }
+
+
