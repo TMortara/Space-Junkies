@@ -1,7 +1,10 @@
 body {
     background-image: url("../images/39149.jpg");
-    background-size:cover;
+    /* background-size:cover; */
     color:black;
+    height: auto;
+    width: 100%;
+    background-size:100%;
 }
 
 #main-title {
@@ -25,6 +28,13 @@ body {
     font-size: 1.5rem;
     font-weight: bolder;
 }
+
+@media screen and (min-width: 480px) {
+    #input-container {
+      padding-top: 12rem;
+    }
+  }
+
 #input-results {
     text-align: center;
 }
@@ -45,6 +55,8 @@ div > h2 {
     font-weight: lighter;
     text-align: center;
     background-color:#3C4CA6;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #forecast-container {
