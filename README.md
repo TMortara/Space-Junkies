@@ -80,3 +80,7 @@ MIT license
 Launch Results
 
 ![Launch Results](assets/images/launchresults.png)
+
+## Project Presentation
+[Space Junkies - Project 1 (1).pdf](https://github.com/TMortara/Space-Junkies/files/10213772/Space.Junkies.-.Project.1.1.pdf)
+
