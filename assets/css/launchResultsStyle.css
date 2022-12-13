@@ -29,12 +29,6 @@ body {
     font-weight: bolder;
 }
 
-@media screen and (min-width: 480px) {
-    #input-container {
-      padding-top: 12rem;
-    }
-  }
-
 #input-results {
     text-align: center;
 }
